@@ -416,6 +416,26 @@
             .description-grid { grid-template-columns: 1fr; gap: 30px; }
             .section-number::after { width: 100px; }
         }
+
+        .download-btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(2, 12, 27, 0.3);
+        }
     </style>
 </head>
 <body>
@@ -479,6 +499,18 @@
                         <p>
                             By handling Android Debug Bridge (ADB) processing configurations behind an intuitive UI engine, Nyx permits operators to run mobile interfaces side-by-side with desktop compilers, tracking real-time device conditions effortlessly.
                         </p>
+                        <div class="description-text">
+                            <p>
+                                <strong>Nyx</strong> is a specialized Windows desktop application... [your existing text].
+                            </p>
+                            <p>
+                                By handling Android Debug Bridge (ADB) processing... [your existing text].
+                            </p>
+                            
+                            <a href="assets/nyx.zip" class="download-btn" download>
+                                <i class="fas fa-download"></i> Download Latest Release (.zip)
+                            </a>
+                        </div>
                     </div>
                     <div>
                         <h4 style="color: var(--primary-color); margin-bottom: 15px; font-size: 1.1rem;">Technologies Used</h4>
