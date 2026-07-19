@@ -40,6 +40,14 @@
             min-height: 100vh;
         }
 
+        /* body {
+            background-color: #0a192f;
+            background-image: 
+                linear-gradient(rgba(100, 255, 218, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(100, 255, 218, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        } */
+
         .skip-link {
             position: absolute;
             top: -40px;
@@ -48,7 +56,7 @@
             color: var(--bg-dark);
             padding: 8px 16px;
             z-index: 1000;
-            transition: top 0.3s;
+            transition: top 0.4s;
         }
 
         .skip-link:hover {
@@ -704,7 +712,7 @@
                     <div class="about-text">
                         <p>Hello! My name is Lawrence and I enjoy creating things that amuses me. My interest in web development started back in 2023 when I decided to try making websites, portfolios and clones of popular websites.</p>
                         <p>Fast-forward to today, and I've had some experiences making websites from requests but limited to students.</p>
-                        <p>My main focus these days is building accessible, responsive <a href="#" style="color: var(--accent-color); text-decoration: none;">Web Apps</a>.</p>
+                        <p>My main focus these days is building accessible, responsive <a style="color: var(--accent-color); text-decoration: none;">Web Apps</a>.</p>
                         <p>Here are a few technologies I've been working with recently:</p>
                         <div class="skills-grid">
                             <span class="skill-item">JavaScript</span>
@@ -891,17 +899,18 @@
             link.addEventListener('click', closeMobileMenu);
         });
 
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('.nav-links a, .btn-custom').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 const targetSection = document.querySelector(targetId);
                 
                 if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    // targetSection.scrollIntoView({
+                    //     behavior: 'smooth',
+                    //     block: 'start'
+                    // });
+                    smoothScrollTo(targetSection, 800);
                 }
             });
         });
@@ -972,6 +981,25 @@
             }
             
             setTimeout(typeWriter, 500);
+        }
+
+        // Custom slow‑scroll function (easeInOutCubic, 800ms)
+        function smoothScrollTo(targetEl, duration = 800) {
+        const start = window.pageYOffset;
+        const end = targetEl.getBoundingClientRect().top + start;
+        const startTime = performance.now();
+
+        function scroll(now) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            // easeInOutCubic easing
+            const ease = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+            window.scrollTo(0, start + (end - start) * ease);
+            if (progress < 1) requestAnimationFrame(scroll);
+        }
+        requestAnimationFrame(scroll);
         }
     </script>
 </body>
