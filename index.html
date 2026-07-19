@@ -40,7 +40,6 @@
             min-height: 100vh;
         }
 
-        /* Skip to content link for accessibility */
         .skip-link {
             position: absolute;
             top: -40px;
@@ -56,13 +55,11 @@
             top: 0;
         }
 
-        /* Layout */
         .main-container {
             display: flex;
             min-height: 100vh;
         }
 
-        /* Sidebar Navigation */
         .sidebar {
             width: var(--nav-width);
             height: 100vh;
@@ -104,7 +101,6 @@
             margin-bottom: 20px;
         }
 
-        /* Navigation Links */
         .nav-links {
             list-style: none;
             padding: 0;
@@ -122,7 +118,7 @@
             align-items: center;
             padding: 10px 15px;
             border-radius: 5px;
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, background-color 0.3s ease;
             position: relative;
             overflow: hidden;
         }
@@ -154,7 +150,6 @@
             margin-left: 15px;
         }
 
-        /* Social Icons */
         .social-links {
             display: flex;
             justify-content: center;
@@ -173,7 +168,6 @@
             transform: translateY(-3px);
         }
 
-        /* Main Content */
         .content-area {
             margin-left: var(--nav-width);
             padding: 60px 100px;
@@ -198,7 +192,6 @@
         section:nth-child(2) { animation-delay: 0.2s; }
         section:nth-child(3) { animation-delay: 0.3s; }
         section:nth-child(4) { animation-delay: 0.4s; }
-        section:nth-child(5) { animation-delay: 0.5s; }
 
         .section-number {
             font-size: 1.2rem;
@@ -226,7 +219,6 @@
             margin-bottom: 40px;
         }
 
-        /* Hero Section */
         .hero-title {
             font-size: 4rem;
             font-weight: 700;
@@ -250,7 +242,6 @@
             margin-bottom: 50px;
         }
 
-        /* Buttons */
         .btn-custom {
             border: 2px solid var(--accent-color);
             color: var(--accent-color);
@@ -271,7 +262,6 @@
             box-shadow: 0 10px 30px -15px rgba(100, 255, 218, 0.3);
         }
 
-        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 3fr 2fr;
@@ -308,7 +298,6 @@
             border-radius: 10px;
         }
 
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -329,110 +318,6 @@
             margin-right: 10px;
         }
 
-        /* Experience Section */
-        .experience-tabs {
-            display: flex;
-            gap: 5px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
-        .experience-tab {
-            padding: 15px 25px;
-            background: transparent;
-            border: none;
-            color: var(--secondary-color);
-            cursor: pointer;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            border-bottom: 2px solid transparent;
-            position: relative;
-        }
-
-        .experience-tab:hover {
-            color: var(--accent-color);
-        }
-
-        .experience-tab.active {
-            color: var(--accent-color);
-            border-bottom-color: var(--accent-color);
-        }
-
-        .experience-tab::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        .experience-tab:hover::after {
-            width: 100%;
-        }
-
-        .experience-tab.active::after {
-            width: 100%;
-        }
-
-        .experience-content {
-            background-color: var(--bg-light);
-            padding: 30px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .experience-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px -15px rgba(2, 12, 27, 0.7);
-        }
-
-        .experience-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 5px;
-        }
-
-        .experience-company {
-            color: var(--accent-color);
-            font-family: monospace;
-            margin-bottom: 15px;
-        }
-
-        .experience-date {
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-            font-family: monospace;
-            margin-bottom: 20px;
-        }
-
-        .experience-description {
-            color: var(--secondary-color);
-        }
-
-        .experience-description ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .experience-description li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-
-        .experience-description li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent-color);
-        }
-
-        /* Projects Section */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -480,18 +365,6 @@
         .project-folder {
             font-size: 2.5rem;
             color: var(--accent-color);
-        }
-
-        .project-links a {
-            color: var(--primary-color);
-            margin-left: 15px;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-
-        .project-links a:hover {
-            color: var(--accent-color);
-            transform: translateY(-3px);
         }
 
         .project-title {
@@ -550,64 +423,6 @@
             height: 100%;
         }
 
-        .project-stats {
-            display: flex;
-            gap: 15px;
-            color: var(--secondary-color);
-            font-size: 0.85rem;
-        }
-
-        .project-stats span {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* Writing Section */
-        .writing-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .writing-item {
-            background-color: var(--bg-light);
-            padding: 25px 30px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .writing-item:hover {
-            transform: translateX(10px);
-            background-color: rgba(100, 255, 218, 0.05);
-        }
-
-        .writing-date {
-            font-family: monospace;
-            color: var(--accent-color);
-            font-size: 0.85rem;
-            margin-bottom: 8px;
-        }
-
-        .writing-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            transition: color 0.3s ease;
-        }
-
-        .writing-item:hover .writing-title {
-            color: var(--accent-color);
-        }
-
-        .writing-description {
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-        }
-
-        /* Footer */
         .footer {
             text-align: center;
             padding: 30px 0;
@@ -621,7 +436,6 @@
             text-decoration: none;
         }
 
-        /* Mobile Menu Button */
         .mobile-menu-btn {
             display: none;
             position: fixed;
@@ -643,7 +457,6 @@
             transform: scale(1.05);
         }
 
-        /* Responsive Design */
         @media (max-width: 1024px) {
             .sidebar {
                 width: 250px;
@@ -656,7 +469,6 @@
         }
 
         @media (max-width: 768px) {
-            /* Hide sidebar initially on mobile */
             .sidebar {
                 position: fixed;
                 left: 0;
@@ -718,12 +530,10 @@
                 font-size: 1.8rem;
             }
 
-            /* Show menu button */
             .mobile-menu-btn {
                 display: block;
             }
 
-            /* Content area adjusts for fixed sidebar being hidden */
             .content-area {
                 margin-left: 0;
                 padding: 80px 20px 40px;
@@ -762,41 +572,8 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
-
-            .experience-tabs {
-                flex-direction: row;
-                overflow-x: auto;
-                gap: 0;
-                padding-bottom: 10px;
-                margin-bottom: 20px;
-            }
-
-            .experience-tab {
-                padding: 12px 20px;
-                font-size: 0.9rem;
-                white-space: nowrap;
-            }
-
-            .experience-content {
-                padding: 20px;
-            }
         }
 
-        /* Toast styling */
-        .time-travel-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(10, 25, 47, 0.95);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-        }
-
-        /* Toast styling */
         .toast {
             background-color: var(--bg-light);
             color: var(--primary-color);
@@ -813,7 +590,6 @@
             color: var(--secondary-color);
         }
 
-        /* Scrollbar styling */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -831,13 +607,11 @@
             background: var(--accent-color);
         }
 
-        /* Selection styling */
         ::selection {
             background-color: rgba(100, 255, 218, 0.3);
             color: var(--primary-color);
         }
 
-        /* Mobile overlay when menu is open */
         .sidebar-overlay {
             display: none;
             position: fixed;
@@ -853,7 +627,6 @@
             display: block;
         }
 
-        /* Styles for image-based tech icons */
         .tech-icon {
             display: flex;
             align-items: center;
@@ -868,10 +641,8 @@
     </style>
 </head>
 <body>
-    <!-- Skip to Content Link -->
     <a href="#projects" class="skip-link">Skip to Content</a>
 
-    <!-- Bootstrap Toast -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 9999;">
         <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header pb-3">
@@ -885,44 +656,35 @@
         </div>
     </div>
 
-    <!-- Mobile Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-    <!-- Mobile Menu Button -->
     <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
         <i class="fas fa-bars"></i>
     </button>
 
     <div class="main-container">
-        <!-- Sidebar Navigation -->
         <nav class="sidebar" id="sidebar">
             <div>
                 <div class="nav-profile">
-                    <img src="images/profile.png" alt="Brittany Chiang" class="nav-profile-img">
+                    <img src="images/profile.png" alt="Lawrence Tamayo" class="nav-profile-img">
                     <h1 class="nav-name">Lawrence Tamayo</h1>
                     <p class="nav-title">Developer</p>
                 </div>
 
                 <ul class="nav-links">
                     <li><a href="#about" class="nav-link"><span>About</span></a></li>
-                    <!-- <li><a href="#experience" class="nav-link"><span>Experience</span></a></li> -->
                     <li><a href="#projects" class="nav-link"><span>Projects</span></a></li>
-                    <!-- <li><a href="#writing" class="nav-link"><span>Writing</span></a></li> -->
+                    <li><a href="#certificates" class="nav-link"><span>Certificates</span></a></li>
                 </ul>
             </div>
 
             <div class="social-links">
                 <a href="https://github.com/Chief-ely" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 <a href="https://linkedin.com/in/tamayo-lawrence-2b4194395/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <!-- <a href="https://codepen.io/bchiang7" target="_blank" aria-label="CodePen"><i class="fab fa-codepen"></i></a>
-                <a href="https://instagram.com/bchiang7" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://goodreads.com/bchiang7" target="_blank" aria-label="Goodreads"><i class="fab fa-goodreads"></i></a> -->
             </div>
         </nav>
 
-        <!-- Main Content Area -->
         <main class="content-area" id="main-content">
-            <!-- Hero Section -->
             <section id="hero">
                 <p class="section-number" style="margin-bottom: 20px;">Hello, this is my portfolio</p>
                 <h1 class="hero-title">Lawrence Tamayo.</h1>
@@ -935,7 +697,6 @@
                 <a href="#projects" class="btn-custom">Check out my work</a>
             </section>
 
-            <!-- About Section -->
             <section id="about">
                 <p class="section-number">01. About</p>
                 <h2 class="section-title">About Me</h2>
@@ -957,53 +718,19 @@
                         </div>
                     </div>
                     <div class="about-image-container">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiCTCRF8VMxR63s2WjdXsdLipybRtkfjKTeA&s" alt="About Brittany" class="about-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiCTCRF8VMxR63s2WjdXsdLipybRtkfjKTeA&s" alt="About Me" class="about-image">
                     </div>
                 </div>
             </section>
 
-            <!-- Experience Section -->
-            <!-- <section id="experience">
-                <p class="section-number">02. Experience</p>
-                <h2 class="section-title">Where I've Worked</h2>
-                
-                <div class="experience-tabs" role="tablist">
-                    <button class="experience-tab active" data-tab="klaviyo">Magnolia</button>
-                    <button class="experience-tab" data-tab="upstatement">Upstatement</button>
-                    <button class="experience-tab" data-tab="apple">Apple Music</button>
-                    <button class="experience-tab" data-tab="scout">Scout Studio</button>
-                    <button class="experience-tab" data-tab="starry">Starry</button>
-                    <button class="experience-tab" data-tab="mullen">MullenLowe</button>
-                </div>
-
-                <div class="experience-content" id="experience-content">
-                    <h3 class="experience-title">Senior Frontend Engineer, Accessibility</h3>
-                    <p class="experience-company">@ Klaviyo</p>
-                    <p class="experience-date">2024 - Present</p>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Building accessible, pixel-perfect digital experiences</li>
-                            <li>Working with JavaScript, TypeScript, React, and Storybook</li>
-                            <li>Focusing on accessibility best practices and inclusive design</li>
-                            <li>Contributing to the design system and component library</li>
-                        </ul>
-                    </div>
-                </div>
-            </section> -->
-
-            <!-- Projects Section -->
             <section id="projects">
                 <p class="section-number">02. What I've Built</p>
                 <h2 class="section-title">Projects</h2>
                 <div class="projects-grid">
                     
-                    <!-- Project 1 -->
                     <div class="project-card">
                         <div class="project-top">
                             <span class="project-folder"><i class="far fa-folder"></i></span>
-                            <!-- <div class="project-links">
-                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                            </div> -->
                         </div>
                         <h3 class="project-title">Tabi: Tagalog <-> Bisaya (Cebuano) Translator App</h3>
                         <p class="project-description">A mobile translation application that bridges the language gap between Tagalog and Bisaya (Cebuano) speakers using machine learning and transformer models.</p>
@@ -1041,27 +768,23 @@
                         </div>
                     </div>
 
-                    <!-- Project 2 -->
                     <a href="nyx.html" target="_self" style="text-decoration: none; color: inherit; display: block;">
                         <div class="project-card">
                             <div class="project-top">
                                 <span class="project-folder"><i class="far fa-folder"></i></span>
-                                <!-- <div class="project-links">
-                                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                </div> -->
                             </div>
                             <h3 class="project-title">Nyx: Screen Mirroring Desktop App</h3>
                             <p class="project-description">A desktop application for Windows that utilizes scrcpy to stream and control mobile devices directly from a laptop, providing a seamless interface for device interaction.</p>
                             <div class="project-tech">
                                 <div class="tech-item">
                                     <span class="tech-icon">
-                                        <img src="images/wpf.png" alt="Firebase" class="tech-image">
+                                        <img src="images/wpf.png" alt=".NET WPF" class="tech-image">
                                     </span>
                                     <span>.NET WPF</span>
                                 </div>
                                 <div class="tech-item">
                                     <span class="tech-icon">
-                                        <img src="images/c_sharp.png" alt="Firebase" class="tech-image">
+                                        <img src="images/c_sharp.png" alt="C#" class="tech-image">
                                     </span>
                                     <span>C#</span>
                                 </div>
@@ -1069,14 +792,10 @@
                         </div>
                     </a>
 
-                    <!-- Project 3 -->
                     <a href="https://shield-system.infinityfreeapp.com/login" target="_blank" style="text-decoration: none; color: inherit; display: block;">
                         <div class="project-card">
                             <div class="project-top">
                                 <span class="project-folder"><i class="far fa-folder"></i></span>
-                                <!-- <div class="project-links">
-                                    <i class="fab fa-github"></i>
-                                </div> -->
                             </div>
                             <h3 class="project-title">SHIELD: Safety Equipment Management</h3>
                             <p class="project-description">A comprehensive platform for managing safety equipment, featuring report generation, status tracking via scanning, user management, and offline capabilities for areas with limited connectivity.</p>
@@ -1101,198 +820,34 @@
                         </div>
                     </a>
 
-                    <!-- Project 2 -->
-                    <!-- <div class="project-card">
-                        <div class="project-top">
-                            <span class="project-folder"><i class="far fa-folder"></i></span>
-                            <div class="project-links">
-                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="#" aria-label="External"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Spotify Profile</h3>
-                        <p class="project-description">A beautiful visualization of your Spotify listening habits. View your top artists, tracks, and playlists with stunning charts and graphs.</p>
-                        <div class="project-tech">
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="10" stroke="#61DAFB" stroke-width="2"/>
-                                        <circle cx="12" cy="12" r="4" fill="#61DAFB"/>
-                                        <line x1="12" y1="2" x2="12" y2="4" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="12" y1="20" x2="12" y2="22" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="2" y1="12" x2="4" y2="12" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="20" y1="12" x2="22" y2="12" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="#61DAFB" stroke-width="2"/>
-                                    </svg>
-                                </span>
-                                <span>React</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="4" y="4" width="16" height="16" rx="4" stroke="#8B8B8B" stroke-width="2"/>
-                                        <circle cx="12" cy="12" r="3" stroke="#8B8B8B" stroke-width="2"/>
-                                        <line x1="12" y1="4" x2="12" y2="8" stroke="#8B8B8B" stroke-width="2"/>
-                                        <line x1="12" y1="16" x2="12" y2="20" stroke="#8B8B8B" stroke-width="2"/>
-                                        <line x1="4" y1="12" x2="8" y2="12" stroke="#8B8B8B" stroke-width="2"/>
-                                        <line x1="16" y1="12" x2="20" y2="12" stroke="#8B8B8B" stroke-width="2"/>
-                                    </svg>
-                                </span>
-                                <span>Express</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#F7DF1E" stroke-width="2" fill="none"/>
-                                        <path d="M2 17l10 5 10-5" stroke="#F7DF1E" stroke-width="2" fill="none"/>
-                                        <path d="M2 12l10 5 10-5" stroke="#F7DF1E" stroke-width="2" fill="none"/>
-                                    </svg>
-                                </span>
-                                <span>D3.js</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="10" stroke="#1DB954" stroke-width="2"/>
-                                        <path d="M12 6a6 6 0 0 0 0 12" stroke="#1DB954" stroke-width="2"/>
-                                        <path d="M12 6a6 6 0 0 1 0 12" stroke="#1DB954" stroke-width="2"/>
-                                    </svg>
-                                </span>
-                                <span>Spotify API</span>
-                            </div>
-                        </div>
-                        <div class="project-stats">
-                            <span><i class="fab fa-github"></i> 705</span>
-                        </div>
-                    </div> -->
-
-                    <!-- Project 3 -->
-                    <!-- <div class="project-card">
-                        <div class="project-top">
-                            <span class="project-folder"><i class="far fa-folder"></i></span>
-                            <div class="project-links">
-                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="#" aria-label="External"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Halcyon Theme</h3>
-                        <p class="project-description">A minimal, dark theme for VS Code. Features carefully selected color palettes for optimal readability and reduced eye strain during late-night coding sessions.</p>
-                        <div class="project-tech">
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="4" y="4" width="16" height="16" rx="2" stroke="#007ACC" stroke-width="2"/>
-                                        <path d="M8 12h8M12 8v8" stroke="#007ACC" stroke-width="2"/>
-                                    </svg>
-                                </span>
-                                <span>VS Code</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <text x="6" y="17" font-size="8" font-weight="bold" fill="#F7DF1E">{ }</text>
-                                    </svg>
-                                </span>
-                                <span>JSON</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect x="3" y="3" width="18" height="18" rx="2" stroke="#9CDCFE" stroke-width="2"/>
-                                        <circle cx="12" cy="12" r="5" stroke="#9CDCFE" stroke-width="2"/>
-                                    </svg>
-                                </span>
-                                <span>Theme</span>
-                            </div>
-                        </div>
-                        <div class="project-stats">
-                            <span><i class="fas fa-download"></i> 100k+ installs</span>
-                        </div>
-                    </div> -->
-
-                    <!-- Project 4 -->
-                    <!-- <div class="project-card">
-                        <div class="project-top">
-                            <span class="project-folder"><i class="far fa-folder"></i></span>
-                            <div class="project-links">
-                                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                <a href="#" aria-label="External"><i class="fas fa-external-link-alt"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title">brittanychiang.com v4</h3>
-                        <p class="project-description">The fourth iteration of my personal portfolio website. Built with Gatsby and styled-components, featuring smooth animations and transitions.</p>
-                        <div class="project-tech">
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="10" stroke="#663399" stroke-width="2"/>
-                                        <text x="8" y="16" font-size="8" font-weight="bold" fill="#663399">G</text>
-                                    </svg>
-                                </span>
-                                <span>Gatsby</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="10" stroke="#DB7093" stroke-width="2"/>
-                                        <text x="7" y="16" font-size="8" font-weight="bold" fill="#DB7093">SC</text>
-                                    </svg>
-                                </span>
-                                <span>Styled Components</span>
-                            </div>
-                            <div class="tech-item">
-                                <span class="tech-icon">
-                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="12" cy="12" r="10" stroke="#61DAFB" stroke-width="2"/>
-                                        <circle cx="12" cy="12" r="4" fill="#61DAFB"/>
-                                        <line x1="12" y1="2" x2="12" y2="4" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="12" y1="20" x2="12" y2="22" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="2" y1="12" x2="4" y2="12" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="20" y1="12" x2="22" y2="12" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="#61DAFB" stroke-width="2"/>
-                                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="#61DAFB" stroke-width="2"/>
-                                    </svg>
-                                </span>
-                                <span>React</span>
-                            </div>
-                        </div>
-                        <div class="project-stats">
-                            <span><i class="fab fa-github"></i> 8,153</span>
-                        </div>
-                    </div> -->
-
                 </div>
             </section>
 
-            <!-- Writing Section -->
-            <!-- <section id="writing">
-                <p class="section-number">04. I Also Write</p>
-                <h2 class="section-title">Writing</h2>
-                <ul class="writing-list">
-                    <li class="writing-item">
-                        <p class="writing-date">2024</p>
-                        <h3 class="writing-title">5 Common Accessibility Pitfalls</h3>
-                        <p class="writing-description">An exploration of the most common accessibility issues found in modern web applications and how to fix them.</p>
-                    </li>
-                    <li class="writing-item">
-                        <p class="writing-date">2020</p>
-                        <h3 class="writing-title">Integrating Algolia Search with WordPress Multisite</h3>
-                        <p class="writing-description">A technical guide on implementing powerful search functionality across a WordPress multisite network using Algolia.</p>
-                    </li>
-                    <li class="writing-item">
-                        <p class="writing-date">2019</p>
-                        <h3 class="writing-title">Building a Headless Mobile App CMS From Scratch</h3>
-                        <p class="writing-description">How we built a custom CMS for a headless mobile app architecture at Upstatement, enabling content editors to manage app content seamlessly.</p>
-                    </li>
-                </ul>
-            </section> -->
+            <section id="certificates">
+                <p class="section-number">03. Certificates</p>
+                <h2 class="section-title">Certificates</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-top">
+                            <span class="project-folder"><i class="far fa-folder"></i></span>
+                        </div>
+                        <h3 class="project-title">Placeholder 1</h3>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <span class="project-folder"><i class="far fa-folder"></i></span>
+                        </div>
+                        <h3 class="project-title">Placeholder 2</h3>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-top">
+                            <span class="project-folder"><i class="far fa-folder"></i></span>
+                        </div>
+                        <h3 class="project-title">Placeholder 3</h3>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Footer -->
             <footer class="footer">
                 <p>Designed and built by Lawrence Tamayo</p>
                 <p style="margin-top: 10px;">Created with HTML, CSS, JS & Bootstrap</p>
@@ -1302,118 +857,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Experience data for tabs
-        const experienceData = {
-            klaviyo: {
-                title: "Senior Frontend Engineer, Accessibility",
-                company: "@ Klaviyo",
-                date: "2024 - Present",
-                description: `
-                    <ul>
-                        <li>Building accessible, pixel-perfect digital experiences</li>
-                        <li>Working with JavaScript, TypeScript, React, and Storybook</li>
-                        <li>Focusing on accessibility best practices and inclusive design</li>
-                        <li>Contributing to the design system and component library</li>
-                    </ul>
-                `
-            },
-            upstatement: {
-                title: "Lead Engineer",
-                company: "@ Upstatement",
-                date: "2018 - 2024",
-                description: `
-                    <ul>
-                        <li>Led engineering for multiple client projects</li>
-                        <li>Worked with JavaScript, TypeScript, React, Next.js, React Native</li>
-                        <li>Built headless CMS solutions with WordPress and Contentful</li>
-                        <li>Mentored junior developers and established coding standards</li>
-                    </ul>
-                `
-            },
-            apple: {
-                title: "UI Engineer Co-op",
-                company: "@ Apple Music",
-                date: "July - December 2017",
-                description: `
-                    <ul>
-                        <li>Contributed to Apple Music's web interface</li>
-                        <li>Worked with Ember.js and SCSS</li>
-                        <li>Built components using MusicKit.js</li>
-                        <li>Collaborated with design and product teams</li>
-                    </ul>
-                `
-            },
-            scout: {
-                title: "Developer",
-                company: "@ Scout Studio",
-                date: "2016 - 2017",
-                description: `
-                    <ul>
-                        <li>Built custom websites using Jekyll and WordPress</li>
-                        <li>Developed responsive layouts with SCSS</li>
-                        <li>Worked with clients to define requirements</li>
-                        <li>Implemented performance optimizations</li>
-                    </ul>
-                `
-            },
-            starry: {
-                title: "Software Engineer Co-op",
-                company: "@ Starry",
-                date: "July - December 2016",
-                description: `
-                    <ul>
-                        <li>Developed mobile applications using Cordova</li>
-                        <li>Worked with Backbone.js for frontend development</li>
-                        <li>Collaborated on internet connectivity solutions</li>
-                        <li>Contributed to product development cycle</li>
-                    </ul>
-                `
-            },
-            mullen: {
-                title: "Creative Technologist Co-op",
-                company: "@ MullenLowe",
-                date: "July - December 2015",
-                description: `
-                    <ul>
-                        <li>Built interactive web experiences for clients</li>
-                        <li>Worked with HTML, CSS, and jQuery</li>
-                        <li>Created responsive websites and campaigns</li>
-                        <li>Gained early experience in web development</li>
-                    </ul>
-                `
-            }
-        };
-
-        // Experience tab switching
-        document.querySelectorAll('.experience-tab').forEach(tab => {
-            tab.addEventListener('click', function() {
-                const tabId = this.getAttribute('data-tab');
-                
-                // Update active tab
-                document.querySelectorAll('.experience-tab').forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Update content
-                const experienceContent = document.getElementById('experience-content');
-                const data = experienceData[tabId];
-                
-                experienceContent.style.opacity = '0';
-                experienceContent.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    experienceContent.innerHTML = `
-                        <h3 class="experience-title">${data.title}</h3>
-                        <p class="experience-company">${data.company}</p>
-                        <p class="experience-date">${data.date}</p>
-                        <div class="experience-description">${data.description}</div>
-                    `;
-                    experienceContent.style.opacity = '1';
-                    experienceContent.style.transform = 'translateY(0)';
-                }, 200);
-            });
-        });
-
-        // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const sidebar = document.getElementById('sidebar');
         const sidebarOverlay = document.getElementById('sidebarOverlay');
@@ -1423,7 +866,6 @@
             sidebar.classList.toggle('active');
             sidebarOverlay.classList.toggle('active');
             
-            // Toggle icon between hamburger and close
             const icon = mobileMenuBtn.querySelector('i');
             if (sidebar.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -1445,12 +887,10 @@
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
         sidebarOverlay.addEventListener('click', closeMobileMenu);
 
-        // Close menu when clicking nav links on mobile
         navLinks.forEach(link => {
             link.addEventListener('click', closeMobileMenu);
         });
 
-        // Smooth scroll for navigation links
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1466,7 +906,6 @@
             });
         });
 
-        // Active nav link on scroll
         const sections = document.querySelectorAll('section[id]');
         const allNavLinks = document.querySelectorAll('.nav-links a');
 
@@ -1490,7 +929,6 @@
             });
         });
 
-        // Initialize Bootstrap Toast
         document.addEventListener('DOMContentLoaded', function() {
             const toastEl = document.querySelector('.toast');
             const toast = new bootstrap.Toast(toastEl, {
@@ -1500,7 +938,6 @@
             toast.show();
         });
 
-        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1519,7 +956,6 @@
             observer.observe(section);
         });
 
-        // Typing effect for hero section (optional enhancement)
         const heroText = document.querySelector('.hero-title');
         if (heroText) {
             const text = heroText.textContent;
